@@ -1,6 +1,6 @@
 return {
 	'neovim/nvim-lspconfig',
-	event = { "BufReadPost", "BufNewFile" },
+	event = { 'BufReadPost', 'BufNewFile' },
 	dependencies = {
 		'hrsh7th/cmp-nvim-lsp',
 		'folke/neodev.nvim'
@@ -14,7 +14,7 @@ return {
 				map('n','gi',		vim.lsp.buf.implementation,	'[g]oto [i]mplementation')
 				map('n','ge',		vim.lsp.buf.declaration,	'[g]oto d[e]claration')
 
-				map('n','<leader>h',vim.lsp.buf.hover,			'[h]over')
+				map('n','E',		vim.lsp.buf.hover,			'[h]over')
 				map('n','<leader>s',vim.lsp.buf.signature_help,	'[s]ignature help')
 				map('n','<leader>a',vim.lsp.buf.code_action,	'code [a]ction')
 				map('n','<leader>r',vim.lsp.buf.rename,			'[r]ename')

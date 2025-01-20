@@ -1,8 +1,8 @@
 return  {
-    "denialofsandwich/sudo.nvim",
+    'denialofsandwich/sudo.nvim',
 	event = 'VeryLazy',
     dependencies = {
-      "MunifTanjim/nui.nvim",
+      'MunifTanjim/nui.nvim',
     },
     opts = true,
 }
