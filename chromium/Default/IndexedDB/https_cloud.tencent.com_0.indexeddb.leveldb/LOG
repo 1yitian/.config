@@ -1,7 +1,0 @@
-2025/01/19-14:33:21.060 43a20 Reusing MANIFEST /home/yiding/.config/chromium/Default/IndexedDB/https_cloud.tencent.com_0.indexeddb.leveldb/MANIFEST-000001
-2025/01/19-14:33:21.060 43a20 Recovering log #3
-2025/01/19-14:33:21.061 43a20 Reusing old log /home/yiding/.config/chromium/Default/IndexedDB/https_cloud.tencent.com_0.indexeddb.leveldb/000003.log 
-2025/01/19-14:35:55.054 43a21 Level-0 table #5: started
-2025/01/19-14:35:55.056 43a21 Level-0 table #5: 11321 bytes OK
-2025/01/19-14:35:55.057 43a21 Delete type=0 #3
-2025/01/19-14:35:55.058 43a21 Manual compaction at level-0 from (begin) .. (end); will stop at (end)

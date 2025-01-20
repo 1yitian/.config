@@ -1,6 +1,0 @@
-2025/01/18-21:30:41.109 22dcf Creating DB /home/yiding/.config/chromium/Default/IndexedDB/https_www.17english.com_0.indexeddb.leveldb since it was missing.
-2025/01/18-21:30:41.111 22dcf Reusing MANIFEST /home/yiding/.config/chromium/Default/IndexedDB/https_www.17english.com_0.indexeddb.leveldb/MANIFEST-000001
-2025/01/18-22:37:12.365 22dd0 Level-0 table #5: started
-2025/01/18-22:37:12.366 22dd0 Level-0 table #5: 395 bytes OK
-2025/01/18-22:37:12.368 22dd0 Delete type=0 #3
-2025/01/18-22:37:12.369 22dd0 Manual compaction at level-0 from (begin) .. (end); will stop at (end)

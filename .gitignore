@@ -1,6 +1,7 @@
 chromium/
-go-musicfox/musicfox.log
-go-musicfox/music_cache
 fcitx/
 ibus/
+go-musicfox/music_cache
+go-musicfox/musicfox.log
 nvim/lazy-lock.json
+onedrive/items.sqlite3

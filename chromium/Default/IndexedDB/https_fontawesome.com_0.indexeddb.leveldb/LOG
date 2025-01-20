@@ -1,6 +1,0 @@
-2025/01/13-12:07:56.976 d6f8 Creating DB /home/yiding/.config/chromium/Default/IndexedDB/https_fontawesome.com_0.indexeddb.leveldb since it was missing.
-2025/01/13-12:07:56.977 d6f8 Reusing MANIFEST /home/yiding/.config/chromium/Default/IndexedDB/https_fontawesome.com_0.indexeddb.leveldb/MANIFEST-000001
-2025/01/13-12:09:04.316 d6f9 Level-0 table #5: started
-2025/01/13-12:09:04.319 d6f9 Level-0 table #5: 4627 bytes OK
-2025/01/13-12:09:04.320 d6f9 Delete type=0 #3
-2025/01/13-12:09:04.320 d6f9 Manual compaction at level-0 from (begin) .. (end); will stop at (end)
