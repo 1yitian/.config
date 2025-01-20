@@ -1,0 +1,6 @@
+2025/01/14-14:51:11.315 4b702 Creating DB /home/yiding/.config/chromium/Default/IndexedDB/https_www.liblib.art_0.indexeddb.leveldb since it was missing.
+2025/01/14-14:51:11.317 4b702 Reusing MANIFEST /home/yiding/.config/chromium/Default/IndexedDB/https_www.liblib.art_0.indexeddb.leveldb/MANIFEST-000001
+2025/01/14-14:51:17.896 4b702 Level-0 table #5: started
+2025/01/14-14:51:17.898 4b702 Level-0 table #5: 1822 bytes OK
+2025/01/14-14:51:17.901 4b702 Delete type=0 #3
+2025/01/14-14:51:17.902 4b702 Manual compaction at level-0 from (begin) .. (end); will stop at (end)

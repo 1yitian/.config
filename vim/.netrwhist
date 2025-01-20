@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =2
+let g:netrw_dirhist_2='/home/iding/.config/go-musicfox'
+let g:netrw_dirhist_1='/home/iding/OneDrive/Projects/a'
+let g:netrw_dirhist_0='/usr/share/terminfo'
+let g:netrw_dirhist_9='/home/iding'
+let g:netrw_dirhist_8='/home/iding/.config/vim'
+let g:netrw_dirhist_7='/home/iding/OneDrive/Apps'
+let g:netrw_dirhist_6='/home/iding/OneDrive'
+let g:netrw_dirhist_5='/home/iding/.config/vim/pack/plugins/start/rust.vim'
+let g:netrw_dirhist_4='/home/iding/.config/dunst'
+let g:netrw_dirhist_3='/etc/initcpio/post'

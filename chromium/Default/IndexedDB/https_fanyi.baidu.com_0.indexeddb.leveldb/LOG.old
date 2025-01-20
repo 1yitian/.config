@@ -1,0 +1,6 @@
+2025/01/12-11:38:23.919 43d Creating DB /home/yiding/.config/chromium/Default/IndexedDB/https_fanyi.baidu.com_0.indexeddb.leveldb since it was missing.
+2025/01/12-11:38:23.920 43d Reusing MANIFEST /home/yiding/.config/chromium/Default/IndexedDB/https_fanyi.baidu.com_0.indexeddb.leveldb/MANIFEST-000001
+2025/01/12-11:40:15.260 43e Level-0 table #5: started
+2025/01/12-11:40:15.262 43e Level-0 table #5: 1050 bytes OK
+2025/01/12-11:40:15.263 43e Delete type=0 #3
+2025/01/12-11:40:15.264 43e Manual compaction at level-0 from (begin) .. (end); will stop at (end)

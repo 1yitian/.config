@@ -1,0 +1,6 @@
+[Default Applications]
+x-scheme-handler/baiduyunguanjia=baidunetdisk.desktop
+audio/mpeg=chromium.desktop
+
+[Added Associations]
+audio/mpeg=chromium.desktop;

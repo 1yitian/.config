@@ -1,0 +1,6 @@
+2025/01/13-19:24:16.110 3e594 Creating DB /home/yiding/.config/chromium/Default/IndexedDB/https_developer.chrome.google.cn_0.indexeddb.leveldb since it was missing.
+2025/01/13-19:24:16.112 3e594 Reusing MANIFEST /home/yiding/.config/chromium/Default/IndexedDB/https_developer.chrome.google.cn_0.indexeddb.leveldb/MANIFEST-000001
+2025/01/13-19:49:42.870 3e58d Level-0 table #5: started
+2025/01/13-19:49:42.872 3e58d Level-0 table #5: 6230 bytes OK
+2025/01/13-19:49:42.873 3e58d Delete type=0 #3
+2025/01/13-19:49:42.873 3e58d Manual compaction at level-0 from (begin) .. (end); will stop at (end)

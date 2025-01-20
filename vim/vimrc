@@ -1,0 +1,81 @@
+""""""""""
+" Config "
+""""""""""
+syntax on
+colorscheme bonjour
+filetype on
+filetype plugin on
+filetype indent on
+set mouse=a
+set encoding=utf-8
+set clipboard=unnamedplus
+set incsearch
+set hlsearch
+set scrolloff=5
+set cursorline
+set showcmd
+set wildmenu
+set autoread
+set nowrap
+set nofoldenable
+set undofile
+set undolevels=128
+set list
+set listchars=tab:>~,trail:.
+" Indent
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+set autoindent
+set smartindent
+" gui
+set guioptions-=m  "menu bar
+set guioptions-=T  "toolbar
+set guioptions-=r  "scrollbar
+
+""""""""""
+" Keymap "
+""""""""""
+noremap n           h
+noremap N           5h
+noremap e           j
+noremap E           5j
+noremap u           k
+noremap U           5k
+noremap i           l
+noremap I           5l
+noremap h           n
+noremap H           N
+noremap l           u
+noremap L           <C-r>
+noremap k           i
+noremap K           I
+noremap f           e
+nmap    <left>      :vertical resize-1<CR>  
+map     <down>      :resize+1<CR>  
+nmap    <up>        :resize-1<CR>  
+nmap    <right>     :vertical resize+1<CR>  
+map     t<space>    tt:terminal<CR><C-w><C-w>:q<CR>
+map     tt  :tabnew<CR>
+map     ti  :tabnext<CR>
+map     tn  :tabNext<CR>
+"<leader>
+let g:mapleader = ";"
+map     <leader>n   <C-w>h
+map     <leader>e   <C-w>j
+map     <leader>u   <C-w>k
+map     <leader>i   <C-w>l
+map     <leader>c   <C-w>c
+map     <leader>q   :q<CR>
+map     <leader>Q   :q!<CR>
+tmap    <leader>q   <C-w>:q<CR>
+
+map     <leader>s   :set spell!<CR>
+map     <leader>h   :nohlsearch<CR>
+
+call plug#begin()
+
+" List your plugins here
+Plug 'rust-lang/rust.vim'
+
+call plug#end()

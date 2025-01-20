@@ -1,0 +1,6 @@
+2025/01/13-13:35:05.438 1d734 Creating DB /home/yiding/.config/chromium/Default/IndexedDB/https_akams.cn_0.indexeddb.leveldb since it was missing.
+2025/01/13-13:35:05.440 1d734 Reusing MANIFEST /home/yiding/.config/chromium/Default/IndexedDB/https_akams.cn_0.indexeddb.leveldb/MANIFEST-000001
+2025/01/13-13:35:18.366 1d735 Level-0 table #5: started
+2025/01/13-13:35:18.367 1d735 Level-0 table #5: 833 bytes OK
+2025/01/13-13:35:18.368 1d735 Delete type=0 #3
+2025/01/13-13:35:18.368 1d735 Manual compaction at level-0 from (begin) .. (end); will stop at (end)

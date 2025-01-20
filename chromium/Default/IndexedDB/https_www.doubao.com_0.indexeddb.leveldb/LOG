@@ -1,0 +1,9 @@
+2025/01/18-21:52:42.006 22dd0 Reusing MANIFEST /home/yiding/.config/chromium/Default/IndexedDB/https_www.doubao.com_0.indexeddb.leveldb/MANIFEST-000001
+2025/01/18-21:52:42.006 22dd0 Recovering log #3
+2025/01/18-21:52:42.015 22dd0 Reusing old log /home/yiding/.config/chromium/Default/IndexedDB/https_www.doubao.com_0.indexeddb.leveldb/000003.log 
+2025/01/18-21:52:48.539 22dd1 Level-0 table #5: started
+2025/01/18-21:52:48.554 22dd1 Level-0 table #5: 3468649 bytes OK
+2025/01/18-21:52:48.556 22dd1 Delete type=0 #3
+2025/01/18-21:59:54.305 22dd0 Level-0 table #7: started
+2025/01/18-21:59:54.322 22dd0 Level-0 table #7: 2043549 bytes OK
+2025/01/18-21:59:54.324 22dd0 Delete type=0 #4
