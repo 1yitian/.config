@@ -1,3 +1,6 @@
-2025/01/20-10:35:23.788 4 Reusing MANIFEST /home/yiding/.config/chromium/Default/Session Storage/MANIFEST-000001
-2025/01/20-10:35:23.789 4 Recovering log #165
-2025/01/20-10:35:23.790 4 Reusing old log /home/yiding/.config/chromium/Default/Session Storage/000165.log 
+2025/01/20-11:31:37.474 4 Reusing MANIFEST /home/yiding/.config/chromium/Default/Session Storage/MANIFEST-000001
+2025/01/20-11:31:37.474 4 Recovering log #172
+2025/01/20-11:31:37.475 4 Reusing old log /home/yiding/.config/chromium/Default/Session Storage/000172.log 
+2025/01/20-12:10:48.916 4 Level-0 table #176: started
+2025/01/20-12:10:48.919 4 Level-0 table #176: 28157 bytes OK
+2025/01/20-12:10:48.923 4 Delete type=0 #172
