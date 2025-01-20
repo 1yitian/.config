@@ -1,5 +1,6 @@
 chromium/
 go-musicfox/musicfox.log
+go-musicfox/music_cache
 fcitx/
 ibus/
 nvim/lazy-lock.json
