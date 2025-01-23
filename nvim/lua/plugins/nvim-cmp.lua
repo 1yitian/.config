@@ -18,36 +18,26 @@ return {
 		cmp.setup.cmdline(':', {
 			sources = cmp.config.sources({
 				{ name = 'path' },
-				{ name = 'cmdline',
-					--[[option = {
-					ignore_cmds = { 'Man' }
-					}]]
-				}
+				{ name = 'cmdline' }
 			})
 		})
 		return {
+			preselect = cmp.PreselectMode.Item,
 			window = {
-				--completion = cmp.config.window.bordered(),
 				documentation = cmp.config.window.bordered(),
 			},
 			mapping = {
-				['<C-U>'] = cmp.mapping.scroll_docs(-4),
-				['<C-F>'] = cmp.mapping.scroll_docs(4),
-				['<C-u>'] = cmp.mapping(function()
-					if cmp.visible() then
-						cmp.select_prev_item({ behavior = cmp.SelectBehavior.Select })
-					end
-				end, {'i', 'c'}),
+				['<C-E>'] = cmp.mapping.scroll_docs(-4),
+				['<C-N>'] = cmp.mapping.scroll_docs(4),
+				['<C-Space>'] = cmp.mapping.complete(),
 				['<C-e>'] = cmp.mapping(function()
+						cmp.select_prev_item({ behavior = cmp.SelectBehavior.Select })
 					if cmp.visible() then
-						cmp.select_next_item({ behavior = cmp.SelectBehavior.Select })
 					end
 				end, {'i', 'c'}),
-				['<C-Space>'] = cmp.mapping(function()
+				['<C-n>'] = cmp.mapping(function()
+						cmp.select_next_item({ behavior = cmp.SelectBehavior.Select })
 					if cmp.visible() then
-						cmp.abort()
-					else
-						cmp.complete()
 					end
 				end, {'i', 'c'}),
 				['<Tab>'] = cmp.mapping(function(fallback)
