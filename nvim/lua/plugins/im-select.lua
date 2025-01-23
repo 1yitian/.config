@@ -1,4 +1,5 @@
-return {
+return nil
+--[[ return {
 	'keaising/im-select.nvim',
 	main = 'im_select',
 	event = 'VeryLazy',
@@ -37,4 +38,4 @@ return {
 		-- Async run `default_command` to switch IM or not
 		async_switch_im = true
 	}
-}
+} ]]
