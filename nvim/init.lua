@@ -2,4 +2,4 @@
 
 require('keymaps')
 require('options')
-require('lazynvim')
+require('plugins.lazynvim')
