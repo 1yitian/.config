@@ -1,6 +1,6 @@
 return  {
     'denialofsandwich/sudo.nvim',
-	event = 'VeryLazy',
+	event = 'CmdLineEnter',
     dependencies = {
       'MunifTanjim/nui.nvim',
     },
