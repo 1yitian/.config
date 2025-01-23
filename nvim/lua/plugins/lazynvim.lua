@@ -1,4 +1,9 @@
--- plugins.lua - lazy.nvim
+-- lazy.nvim
+if vim.g.isload == true then
+	return {
+		"folke/lazy.nvim"
+	}
+end
 
 -- Bootstrap lazy.nvim
 local lazypath = vim.fn.stdpath('data') .. '/lazy/lazy.nvim'
@@ -17,11 +22,8 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
--- Make sure to setup `mapleader` and `maplocalleader` before
--- loading lazy.nvim so that mappings are correct.
 -- This is also a good place to setup other settings (vim.opt)
-vim.g.maplocalleader = '\\'
-
+vim.g.isload = true
 -- Setup lazy.nvim
 require('lazy').setup({
 	defaults = { lazy = true },
@@ -32,3 +34,4 @@ require('lazy').setup({
 	-- automatically check for plugin updates
 	checker = { enabled = true },
 })
+
