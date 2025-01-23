@@ -1,7 +1,7 @@
 chromium/
 fcitx/
 ibus/
-go-musicfox/music_cache
+go-musicfox/
 nvim/lazy-lock.json
 onedrive/
 pulse
