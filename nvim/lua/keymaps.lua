@@ -6,7 +6,7 @@ local n = {'n', 'v'}
 local nv = {'n', 'v'}
 local nvo = {'n', 'v', 'o'}
 
-function map(mode, lhs, rhs, desc, noremap)
+local function map(mode, lhs, rhs, desc, noremap)
 	vim.keymap.set(mode, lhs, rhs, {desc = desc, noremap = noremap})
 end
 
@@ -35,9 +35,9 @@ map(n,		'<leader>h',	'<C-w>h',		'focus to left window')
 map(n,		'<leader>n',	'<C-w>j',		'focus to below window')
 map(n,		'<leader>e',	'<C-w>k',		'focus to above window')
 map(n,		'<leader>i',	'<C-w>l',		'focus to right window')
-map(n,		'<leader>w',	':w<CR>',		'[w]rite current buffer')
-map(n,		'<leader>q',	':q<CR>',		'[q]uit current buffer')
-map(n,		'<leader>m',	':%s/    /	/g','<space> to <tab>')
-map(n,		'<leader>tt',	':tabnew<CR>',	'new [t]ab')
-map(n,		'<leader>tn',	':tabNext<CR>',	'[n]ext [t]ab')
-map(n,		'<leader>ti',	':tabnext<CR>',	'previous [t]ab')
+map(n,		'<leader>w',	'<cmd>w<CR>',		'[w]rite current buffer')
+map(n,		';q',	'<cmd>q<CR>',		'[q]uit current buffer')
+map(n,		'<leader>m',	'<cmd>%s/    /	/g','<space> to <tab>')
+map(n,		'<leader>tt',	'<cmd>tabnew<CR>',	'new [t]ab')
+map(n,		'<leader>tn',	'<cmd>tabNext<CR>',	'[n]ext [t]ab')
+map(n,		'<leader>ti',	'<cmd>tabnext<CR>',	'previous [t]ab')
