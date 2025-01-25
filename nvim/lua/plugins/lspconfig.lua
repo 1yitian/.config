@@ -8,6 +8,7 @@ return {
 	config = function()
 		vim.api.nvim_create_autocmd('LspAttach', {
 			callback = function()
+				vim.bo.exrc = true
 				local map = vim.keymap.set
 				local function getopt(desc)
 					return { desc = desc, buffer = 0 }
