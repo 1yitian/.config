@@ -7,6 +7,8 @@ o.incsearch = true
 o.hlsearch = true
 o.smartcase = true
 
+o.exrc = true
+
 -- Tab
 o.tabstop = 4
 o.softtabstop = 4

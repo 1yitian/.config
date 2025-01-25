@@ -8,7 +8,6 @@ return {
 	config = function()
 		vim.api.nvim_create_autocmd('LspAttach', {
 			callback = function()
-				vim.bo.exrc = true
 				local map = vim.keymap.set
 				local function getopt(desc)
 					return { desc = desc, buffer = 0 }
@@ -26,6 +25,7 @@ return {
 				map('n','<leader>f',vim.lsp.buf.format,			getopt('[f]ormat'))
 			end
 		})
+
 		-- support nvim-cmp
 		local capabilities = require('cmp_nvim_lsp').default_capabilities();
 		local servers = {
