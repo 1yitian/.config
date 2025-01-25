@@ -1,8 +1,7 @@
-return nil
---[[ return {
+return {
 	'keaising/im-select.nvim',
 	main = 'im_select',
-	event = 'VeryLazy',
+	-- event = 'VeryLazy',
 	opts = {
 
 		-- IM will be set to `default_im_select` in `normal` mode
@@ -38,4 +37,4 @@ return nil
 		-- Async run `default_command` to switch IM or not
 		async_switch_im = true
 	}
-} ]]
+} 
