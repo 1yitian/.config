@@ -1,10 +1,7 @@
 return {
 	'neovim/nvim-lspconfig',
 	event = { 'BufReadPost', 'BufNewFile' },
-	dependencies = {
-		'hrsh7th/cmp-nvim-lsp',
-		'folke/neodev.nvim'
-	},
+	dependencies = 'saghen/blink.cmp',
 	config = function()
 		vim.api.nvim_create_autocmd('LspAttach', {
 			callback = function()
@@ -26,8 +23,8 @@ return {
 			end
 		})
 
-		-- support nvim-cmp
-		local capabilities = require('cmp_nvim_lsp').default_capabilities();
+		-- support blink.cmp
+		local capabilities = require('blink.cmp').get_lsp_capabilities();
 		local servers = {
 			'lua_ls',
 			'clangd'
@@ -37,9 +34,6 @@ return {
 		-- ':' is $PATH seperater for linux
 		vim.env.PATH = string.format('%s:%s/mason/bin', vim.env.PATH, vim.fn.stdpath('data'))
 		for i = 1, #servers do
-			if servers[i] == 'lua_ls' then
-				require('neodev').setup()
-			end
 			require('lspconfig')[servers[i]].setup({
 				capabilities = capabilities
 			})
