@@ -1,8 +1,8 @@
 return  {
     'denialofsandwich/sudo.nvim',
-	event = 'CmdLineEnter',
+	cmd = {'SudoWrite', 'SudoRead'},
     dependencies = {
-      'MunifTanjim/nui.nvim',
+		'MunifTanjim/nui.nvim',
     },
     opts = true,
 }
