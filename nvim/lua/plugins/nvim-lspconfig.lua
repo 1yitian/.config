@@ -1,6 +1,7 @@
 return {
 	'neovim/nvim-lspconfig',
-	event = { 'BufReadPost', 'BufNewFile' },
+	-- event = { 'BufReadPost', 'BufNewFile' },
+	ft = { 'c', 'lua' },
 	dependencies = 'saghen/blink.cmp',
 	config = function()
 		vim.api.nvim_create_autocmd('LspAttach', {
