@@ -1,8 +1,6 @@
--- lazy.nvim
-if vim.g.isload == true then
-	return {
-		"folke/lazy.nvim"
-	}
+-- lazy.nvim - plugin manager
+if vim.g.lazy_did_setup == true then
+	return { "folke/lazy.nvim" }
 end
 
 -- Bootstrap lazy.nvim
@@ -22,8 +20,6 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
--- This is also a good place to setup other settings (vim.opt)
-vim.g.isload = true
 -- Setup lazy.nvim
 require('lazy').setup({
 	defaults = { lazy = true },
