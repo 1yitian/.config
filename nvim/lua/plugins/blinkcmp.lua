@@ -18,8 +18,8 @@ return {
 			preset = 'default',
 			['<C-e>'] = { 'select_prev', 'fallback' },
 			['<C-E>'] = { 'scroll_documentation_up', 'fallback' },
-			['<C-n>'] = { 'scroll_documentation_down', 'fallback' },
-			['<C-N>'] = { 'select_next', 'fallback' },
+			['<C-N>'] = { 'scroll_documentation_down', 'fallback' },
+			['<C-n>'] = { 'select_next', 'fallback' },
 			['<Tab>'] = { 'accept', 'fallback' },
 		},
 
@@ -39,7 +39,7 @@ return {
 				-- auto_show = false,
 				draw = {
 					columns = {
-						{ "label",    "label_description", gap = 1 },
+						{ "label", "label_description", gap = 1 },
 						{ "kind_icon" },
 					},
 					treesitter = { 'lsp' }
@@ -62,14 +62,7 @@ return {
 		-- Default list of enabled providers defined so that you can extend it
 		-- elsewhere in your config, without redefining it, due to `opts_extend`
 		sources = {
-			default = { 'lsp', 'snippets' },
-			-- cmdline = {}
-			providers = {
-				lsp = {
-					name = 'LSP',
-					module = 'blink.cmp.sources.lsp',
-				}
-			}
+			default = { 'lsp', 'path' },
 		},
 		signature = { enabled = true }
 	},
