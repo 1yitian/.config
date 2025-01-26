@@ -1,7 +1,7 @@
 return {
 	'lukas-reineke/indent-blankline.nvim',
 	main = 'ibl',
-	event = 'VeryLazy',
+	event = 'UIEnter',
 	opts = function()
 		-- create the highlight groups in the highlight setup hook, so they are reset
 		-- every time the colorscheme changes
