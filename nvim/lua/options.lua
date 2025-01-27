@@ -27,6 +27,8 @@ o.laststatus = 0
 o.showmode = false
 o.statusline = ' '
 
+vim.cmd('hi Normal guibg=NONE')
+
 vim.api.nvim_create_autocmd('TextYankPost', {
 	callback = function()
 		vim.highlight.on_yank({
