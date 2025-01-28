@@ -1,8 +1,12 @@
 chromium/
+dconf/
 fcitx/
-ibus/
 go-musicfox/
+ibus/
+lazygit/
 nvim/lazy-lock.json
 onedrive/
-pulse
+pulse/
+yay/
 *.log
+*.LOG
