@@ -1,13 +1,10 @@
 return {
 	'saghen/blink.cmp',
+	version = '*',
 	event = { 'InsertEnter', 'CmdlineEnter' },
-	build = ':!cargo build --release',
-	-- optional: provides snippets for the snippet source
 	dependencies = {
 		'rafamadriz/friendly-snippets',
-		-- 'hrsh7th/cmp-nvim-lsp',
-		-- 'hrsh7th/nvim-cmp',
-		-- 'hrsh7th/cmp-path',
+		-- optional: provides snippets for the snippet source
 	},
 	opts = {
 		-- 'default' for mappings similar to built-in completion
