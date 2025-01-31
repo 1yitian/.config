@@ -7,23 +7,21 @@ return {
 		-- optional: provides snippets for the snippet source
 	},
 	opts = {
-		-- 'default' for mappings similar to built-in completion
-		-- 'super-tab' for mappings similar to vscode (tab to accept, arrow keys to navigate)
-		-- 'enter' for mappings similar to 'super-tab' but with 'enter' to accept
-		-- See the full "keymap" documentation for information on defining your own keymap.
 		keymap = {
-			preset = 'default',
-			['<C-e>'] = { 'select_prev', 'fallback' },
 			['<C-E>'] = { 'scroll_documentation_up', 'fallback' },
 			['<C-N>'] = { 'scroll_documentation_down', 'fallback' },
 			['<C-n>'] = { 'select_next', 'fallback' },
+			['<C-e>'] = { 'select_prev', 'fallback' },
+			['<C-h>'] = { 'snippet_forward', 'fallback' },
+			['<C-i>'] = { 'snippet_backward', 'fallback' },
 			['<Tab>'] = { 'accept', 'fallback' },
+			['<S-Tab>'] = { 'hide', 'fallback' },
 		},
 
 		completion = {
 			trigger = {
 				-- show on characters
-				show_on_keyword = true,
+				-- show_on_keyword = true,
 				-- show on trigger characters. In rust or java, it is '.'.
 				-- show_on_trigger_word = false,
 				-- show_on_insert_on_trigger_character = false
@@ -33,10 +31,11 @@ return {
 			list = { selection = { preselect = true, auto_insert = false } },
 
 			menu = {
+				min_width = 6,
 				-- auto_show = false,
 				draw = {
 					columns = {
-						{ "label", "label_description", gap = 1 },
+						{ "label",    "label_description" },
 						{ "kind_icon" },
 					},
 					treesitter = { 'lsp' }
