@@ -1,7 +1,9 @@
 chromium/
 dconf/
 fcitx/
-go-musicfox/
+go-musicfox/*
+!go-musicfox/go-musicfox.ini
+htop/
 ibus/
 lazygit/
 nvim/lazy-lock.json
