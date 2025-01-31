@@ -23,9 +23,7 @@ o.relativenumber = true
 o.cursorline = true
 o.wrap = false
 o.splitright = true
-o.laststatus = 0
-o.showmode = false
-o.statusline = ' '
+o.laststatus = 1
 
 vim.cmd('hi Normal guibg=NONE')
 
@@ -36,18 +34,5 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 			timeout = 150,
 			on_visual = false,
 		})
-	end
-})
-vim.api.nvim_create_autocmd({'BufWinEnter' ,'BufModifiedSet', 'ModeChanged'}, {
-	callback = function()
-		local mode = vim.api.nvim_get_mode()['mode']
-		if mode ~= 'c' then
-			local name = vim.api.nvim_buf_get_name(0)
-			local modified = ''
-			if vim.bo.modified == true then
-				modified = '*'
-			end
-			print(string.format('[%s] %s%s', mode, name, modified))
-		end
 	end
 })
