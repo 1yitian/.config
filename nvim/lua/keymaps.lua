@@ -12,9 +12,9 @@ end
 
 map(nvo,	'h',			'h',					'move left',							true)
 map(nvo,	'n',			'j',					'move down',							true)
-map(nvo,	'N',			'<C-d>',				'move [d]own a page',					true)
 map(nvo,	'e',			'k',					'move up',								true)
-map(nvo,	'E',			'<C-u>',				'move [u]p a page',						true)
+-- For ft-man-plugin. See :help :Man for help
+map(nvo,	'E',			'K',					'open manual',								false)
 map(nvo,	'i',			'l',					'move right',							true)
 
 map(nvo,	'u',			'i',					'[i]nsert mode',						true)

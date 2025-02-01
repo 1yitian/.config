@@ -6,8 +6,7 @@ o.clipboard = 'unnamedplus'
 o.incsearch = true
 o.hlsearch = true
 o.smartcase = true
-
-o.exrc = true
+o.spell = true
 
 -- Tab
 o.tabstop = 4
@@ -16,7 +15,7 @@ o.shiftwidth = 4
 o.autoindent = true
 o.smartindent = true
 
--- UI config
+-- UI
 o.mouse = 'a'
 o.number = true
 o.relativenumber = true
