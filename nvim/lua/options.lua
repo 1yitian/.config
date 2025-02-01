@@ -7,6 +7,7 @@ o.incsearch = true
 o.hlsearch = true
 o.smartcase = true
 o.spell = true
+o.spelllang:prepend('cjk')
 
 -- Tab
 o.tabstop = 4
