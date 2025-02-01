@@ -78,9 +78,8 @@ autoload -Uz compinit
 compinit -d $ZDATADIR/zcompdump
 # zstyle ':completion:*' rehash true
 zstyle ':completion:*' menu select
-zstyle ':completion:*' file-sort time
+# zstyle ':completion:*' file-sort time
 zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
 zstyle ':completion:*' add-space false
-# zstyle :compinstall filename '/home/yiding/.zshrc'
 ## Path Variable
 [[ -d ~/Projects/scripts ]] && path=($path ~/Projects/scripts)
