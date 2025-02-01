@@ -11,5 +11,3 @@ onedrive/
 pulse/
 systemd/
 yay/
-*.log
-*.LOG
