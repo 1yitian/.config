@@ -8,8 +8,8 @@ SAVEHIST=1000
 # PROMPT='%n@%m %~ %# '
 prompt='%F{cyan}%1~%f '
 ## Options
-setopt autocd correct menucomplete\
-	incappendhistory histignorealldups histignorespace
+setopt autocd correct\
+	incappendhistory histignorealldups histignorespace extendedhistory
 
 ## Aliases & Custom Commands
 alias cpt='cp --preserve=timestamps'
@@ -55,8 +55,11 @@ man() {
 		nvim "+hide Man $1"
 	}
 }
-alias musicfox='local MFWP=/tmp/MFWP;pwd > $MFWP;cd ~;musicfox;cd $(cat $MFWP);rm -r .cache/musicfox'
+alias musicfox='local MFWP=$(pwd);cd ~;musicfox;cd $MFWP'
+alias reset=' reset'
 alias rm='rm -Iv'
+alias zrc="source $ZDOTDIR/.zshrc"
+alias vimconf='cd ~/.config && file=$(fzf) && cd $file:h && vim $file:t'
 
 ## Keymaps -- vi mode
 bindkey -v
@@ -77,7 +80,7 @@ autoload -Uz compinit
 # fpath=($fpath ~/.local/share/zsh/completions)
 compinit -d $ZDATADIR/zcompdump
 # zstyle ':completion:*' rehash true
-zstyle ':completion:*' menu select
+# zstyle ':completion:*' menu select
 # zstyle ':completion:*' file-sort time
 zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
 zstyle ':completion:*' add-space false
