@@ -5,6 +5,18 @@ vim.g.mapleader = ' '
 local function map(mode, lhs, rhs, desc, noremap)
 	vim.keymap.set(mode, lhs, rhs, {desc = desc, noremap = noremap})
 end
+
+---@param modes string the string to parse
+---@return table # modes' table
+---Parse modes' string to chars table
+---For example:
+---```lua
+---modes('nvs')
+---```
+---It will return
+---```lua
+---{'n', 'v', 's'}
+---```
 local function mode(modes)
 	local m = {}
 	for i=1,string.len(modes) do
@@ -32,13 +44,15 @@ map(mode('nv'),		'L',			'<C-r>',						'redo',									true)
 map(mode('nv'),		'f',			'e',							'to the [e]nd of the word',				true)
 map(mode('nv'),		'F',			'E',							'to the [E]nd of the word',				true)
 map(mode('nvo'),	't',			't',							'[t]ill',								true)
-map(mode('nvo'),	'T',			'T',							'back [T]ill',				true)
-map(mode('nvo'),	'j',			'f',							'[f]ind char',				true)
-map(mode('nvo'),	'J',			'F',							'[F]ind back char',				true)
+map(mode('nvo'),	'T',			'T',							'back [T]ill',							true)
+map(mode('nvo'),	'j',			'f',							'[f]ind char',							true)
+map(mode('nvo'),	'J',			'F',							'[F]ind back char',						true)
 map(mode('nv'),		'<up>',			'<Cmd>resize +1<CR>',			'Inceace current window height by 1',	true)
 map(mode('nv'),		'<down>',		'<Cmd>resize -1<CR>',			'Deceace current window height by 1',	true)
 map(mode('nv'),		'<right>',		'<Cmd>vertical resize +1<CR>',	'Inceace current window width by 1',	true)
 map(mode('nv'),		'<left>',		'<Cmd>vertical resize -1<CR>',	'Deceace current window width by 1',	true)
+map(mode('ic'),		'<C-n>',		'<C-n>',						'Next')
+map(mode('ic'),		'<C-e>',		'<C-p>',						'previous')
 
 map(mode('n'),		'<leader>h',	'<C-w>h',						'focus to left window')
 map(mode('n'),		'<leader>n',	'<C-w>j',						'focus to below window')
@@ -50,5 +64,3 @@ map(mode('n'),		'<leader>tn',	'<Cmd>tabNext<CR>',				'[n]ext [t]ab')
 map(mode('n'),		'<leader>ti',	'<Cmd>tabnext<CR>',				'previous [t]ab')
 map(mode('n'),		';w',			'<Cmd>w<CR>',					'[w]rite current buffer')
 map(mode('n'),		';q',			'<Cmd>q<CR>',					'[q]uit current buffer')
-map(mode('nv'),		'm',			'gc',							'toggle [c]ommit')
-map(mode('nv'),		';cc',			'gcc',							'toggle [c]ommit')

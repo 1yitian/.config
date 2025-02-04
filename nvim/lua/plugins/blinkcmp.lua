@@ -1,7 +1,7 @@
 return {
 	'saghen/blink.cmp',
 	build = 'cargo build --release',
-	event = { 'InsertEnter', 'CmdlineEnter' },
+	event = { 'InsertEnter' },
 	dependencies = {
 		'rafamadriz/friendly-snippets',
 		-- optional: provides snippets for the snippet source
@@ -47,6 +47,7 @@ return {
 		-- elsewhere in your config, without redefining it, due to `opts_extend`
 		sources = {
 			default = { 'lsp', 'path' },
+			cmdline = {}
 		},
 		signature = { enabled = true }
 	},
