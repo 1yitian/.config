@@ -1,81 +1,116 @@
-""""""""""
-" Config "
-""""""""""
-syntax on
-colorscheme bonjour
+vim9script
+const start = reltime()
+### Options
+set encoding=utf-8
+syntax enable
 filetype on
 filetype plugin on
-filetype indent on
-set mouse=a
-set encoding=utf-8
+filetype plugin indent on
 set clipboard=unnamedplus
-set incsearch
-set hlsearch
 set scrolloff=5
-set cursorline
-set showcmd
-set wildmenu
 set autoread
-set nowrap
 set nofoldenable
-set undofile
-set undolevels=128
 set list
-set listchars=tab:>~,trail:.
-" Indent
+set listchars=tab:>-,trail:-
+if has('persistent_undo')
+	set undofile
+	set undolevels=128
+endif
+### Indent
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
 set autoindent
 set smartindent
-" gui
-set guioptions-=m  "menu bar
-set guioptions-=T  "toolbar
-set guioptions-=r  "scrollbar
 
-""""""""""
-" Keymap "
-""""""""""
-noremap n           h
-noremap N           5h
-noremap e           j
-noremap E           5j
-noremap u           k
-noremap U           5k
-noremap i           l
-noremap I           5l
-noremap h           n
-noremap H           N
-noremap l           u
-noremap L           <C-r>
-noremap k           i
-noremap K           I
-noremap f           e
-nmap    <left>      :vertical resize-1<CR>  
-map     <down>      :resize+1<CR>  
-nmap    <up>        :resize-1<CR>  
-nmap    <right>     :vertical resize+1<CR>  
-map     t<space>    tt:terminal<CR><C-w><C-w>:q<CR>
-map     tt  :tabnew<CR>
-map     ti  :tabnext<CR>
-map     tn  :tabNext<CR>
-"<leader>
-let g:mapleader = ";"
-map     <leader>n   <C-w>h
-map     <leader>e   <C-w>j
-map     <leader>u   <C-w>k
-map     <leader>i   <C-w>l
-map     <leader>c   <C-w>c
-map     <leader>q   :q<CR>
-map     <leader>Q   :q!<CR>
-tmap    <leader>q   <C-w>:q<CR>
+###Vim UI
+# editor
+set number
+set relativenumber
+set cursorline
+set showmode
+set showcmd
+set ruler
+set nowrap
+# search
+set hlsearch
+set incsearch
+# cmdline
+set wildmenu
+# scheme
+colorscheme bonjour
+# mouse
+if has('mouse')
+	set mouse=a
+endif
+# gui plan to removed
+if has('gui_running')
+	set guioptions-=m  #menu bar
+	set guioptions-=T  #toolbar
+	set guioptions-=r  #scrollbar
+endif
 
-map     <leader>s   :set spell!<CR>
-map     <leader>h   :nohlsearch<CR>
+### Mappings
+# Colemak
+noremap	h	h
+noremap	H	H
+noremap	n	j
+noremap	N	J
+noremap	e	k
+noremap	E	K
+noremap	i	l
+noremap	I	L
+noremap	k	n
+noremap	K	N
+noremap	l	u
+noremap	L	<C-r>
+noremap	u	i
+noremap	U	I
+noremap	f	e
+noremap	<C-w>h   <C-w>h
+noremap	<C-w>n   <C-w>j
+noremap	<C-w>e   <C-w>k
+noremap	<C-w>i   <C-w>l
+noremap	<C-w>H   <C-w>H
+noremap	<C-w>N   <C-w>J
+noremap	<C-w>E   <C-w>K
+noremap	<C-w>I   <C-w>L
+# Custom
+nmap	<left>	:vertical resize+1<CR>  
+nmap	<down>	:resize+1<CR>  
+nmap	<up>	:resize-1<CR>  
+nmap	<right>	:vertical resize-1<CR>  
+map	 tt  :tabnew<CR>
+map	 ti  :tabnext<CR>
+map	 tn  :tabNext<CR>
+map	 <leader>q   :q<CR>
+map	 <leader>Q   :q!<CR>
 
-call plug#begin()
+map	 <leader>s   :set spell!<CR>
+map	 <leader>h   :nohlsearch<CR>
 
-" List your plugins here
-Plug 'rust-lang/rust.vim'
+packadd comment
+packadd editorconfig
+packadd nohlsearch
+# augroup RestoreCursor
+export def RestoreCursor()
+	if num
+	var num = line("'\"")
+	if num >= 1 && num <= line("$") && &filetype !~# 'commit' && index(['xxd', 'gitrebase'], &filetype) == -1
+		execute "normal! g`\""
+	endif
+enddef
 
-call plug#end()
+autocmd_add([{
+	replace: true,
+	group: 'RestoreCursor',
+	event: 'BufReadPost',
+	cmd: 'call RestoreCursor()'
+}])
+# autocmd_add({group: 'RestoreCursor',
+# 			event: 'BufReadPost',
+# 			pattern: '*',
+# 			cmd = {
+# 				}
+# 			})
+g:vimrctime = reltimestr(reltime(start)) .. 's'
