@@ -2,14 +2,15 @@ local ZDATADIR=~/.local/share/zsh
 [[ ! -d $ZDATADIR ]] && mkdir -p $ZDATADIR
 ## History
 HISTFILE=$ZDATADIR/zsh_history
-HISTSIZE=1000
-SAVEHIST=1000
+HISTSIZE=10000
+SAVEHIST=10000
 ## Prompt
 # PROMPT='%n@%m %~ %# '
 prompt='%F{cyan}%1~%f '
 ## Options
-setopt autocd correct\
-	incappendhistory histignorealldups histignorespace extendedhistory
+setopt autocd autopushd correct\
+	incappendhistory histignorealldups histignorespace extendedhistory\
+	autoresume
 
 ## Aliases & Custom Commands
 alias cpt='cp --preserve=timestamps'
@@ -50,6 +51,7 @@ alias grep='grep --color=auto'
 alias hibernate='systemctl hibernate'
 alias icat='kitten icat'
 alias ls='ls --color=auto -h'
+alias make='make -j $(nproc)'
 man() {
 	if (( $# == 1 )) {
 		nvim "+hide Man $1"
